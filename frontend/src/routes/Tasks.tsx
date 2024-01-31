@@ -1,12 +1,20 @@
 import { FC } from "react";
 import Todo from "../components/todo/Todo";
 import { Task } from "../types/ITasks";
+import axois from "";
 
 type Todos = {
   todos: Task[];
 }
 
+// axios Hooks まとめて、ビュッフェ。
+// Custom Hook　の使いかた
+// Axios の使い方
+// Promise=>aynsc/awaitしっかり書く。
+
 const Todos: FC = () => {
+  const todos = //axois.get("/taksk");
+
   const todos = [
     { id: 1, title: "sample1" },
     { id: 2, title: "sample2" },
@@ -22,14 +30,14 @@ const Todos: FC = () => {
           type="text"
           name="title"
           placeholder="What should I do?"
-          className="input input-bordered w-4/5"
+          className="input input-bordered h-8 w-4/5"
         />
-        <button className="btn btn-primary btn-outline text-lg">add</button>
+        <button className="btn btn-sm btn-primary">add</button>
       </div>
       <div className="overflow-y-scroll"  style={{height:'70vh'}}>
         <table className="table">
           {todos.map((todo) => (
-            <Todo key={todo.id} title={todo.title} done={todo.done}/>
+            <Todo key={todo.id} title={todo.title}/>
           ))}
         </table>
       </div>

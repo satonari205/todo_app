@@ -1,28 +1,23 @@
 import { FC } from "react"
 import { Task } from "../../types/ITasks";
 
-const Todo: FC<Task> = ({ title, done }) => {
+const Todo: FC<Task> = ({ title }) => {
   const dummy = () => { alert('not yet'); };
 
   return (
     <>
-      <tr className="hover:bg-gray-100 text-lg">
-        <th className="w-3/4">{title}</th>
-        <td>
-          <button
-            className="btn btn-sm btn-success btn-outline"
-            onClick={dummy}
-          >
-            Completed
-          </button>
-        </td>
-        <td>
-          <button
-            className="btn btn-sm btn-error btn-outline"
-            onClick={dummy}
-          >
-            Delete
-          </button>
+      <tr className="border-b-2 flex flex-col md:flex-row hover:bg-gray-100 text-lg">
+        <th className="w-3/4">{title}{title}{title}</th>
+        <td className="flex items-center ml-auto">
+            <button className="btn btn-xs btn-primary btn-outline" onClick={dummy}>
+              Done
+            </button>
+            <button className="btn btn-xs btn-success btn-outline mx-2" onClick={dummy}>
+              Edit
+            </button>
+            <button className="btn btn-xs btn-error btn-outline" onClick={dummy}>
+              Delete
+            </button>
         </td>
       </tr>
     </>

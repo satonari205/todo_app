@@ -6,7 +6,7 @@ const Layouts: FC = () => {
   return (
     <>
       <div className="h-screen p-4">
-        <div className="flex flex-col p-4 border rounded-xl">
+        <div className="flex flex-col p-4 border rounded-xl max-w-2xl mx-auto">
           <Nav />
           <div className="my-5">
             <Outlet />
