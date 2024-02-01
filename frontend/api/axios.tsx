@@ -1,3 +1,0 @@
-// import axios;
-
-axios.create();

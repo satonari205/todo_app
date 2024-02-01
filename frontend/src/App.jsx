@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Layouts from './layouts/Layouts';
-import Tasks from './routes/Tasks';
+import { Tasks } from './routes/Tasks';
 import { Diary } from './routes/Diary';
 import { Calendar } from './routes/Calendar';
 
@@ -20,4 +20,4 @@ function App() {
   );
 }
 
-export default App
+export default App;
