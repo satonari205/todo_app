@@ -1,6 +1,4 @@
-import { FC } from "react";
-
-export const Calendar: FC = () => {
+export const Calendar = () => {
   return(
     <>
       <div className="overflow-y-scroll"  style={{height:'75vh'}}>

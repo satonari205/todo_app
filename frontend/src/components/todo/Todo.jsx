@@ -1,12 +1,9 @@
-import { FC } from "react"
-import { Task } from "../../types/ITasks";
-
-const Todo: FC<Task> = ({ title }) => {
+const Todo = ({ title }) => {
   const dummy = () => { alert('not yet'); };
 
   return (
     <>
-      <tr className="border-b-2 flex flex-col md:flex-row hover:bg-gray-100 text-lg">
+      <tr className="flex flex-col md:flex-row hover:bg-gray-100 text-lg">
         <th className="w-3/4">{title}{title}{title}</th>
         <td className="flex items-center ml-auto">
             <button className="btn btn-xs btn-primary btn-outline" onClick={dummy}>

@@ -3,17 +3,15 @@ import api from './api';
 
 const useTasks = () => {
   const fetcher = async () => {
-    await api.get('tasks')
-      .then((res) => {
-        const todos = res.data;
-        return todos.filter((todo) => !todo.done);
-      })
-      .catch((e) => {
-        console.log(e);
-      });
+    try {
+      const res = await api.get('tasks');
+      return res.data.filter((todo) => !todo.done);
+    } catch(e) {
+      throw new Error(e);
+    }
   }
 
-  const { data, error, isLoading } = useSWR(`/tasks`, fetcher)
+  const { data, error, isLoading } = useSWR(`/tasks`, fetcher);
 
   return {
     tasks: data,
