@@ -1,6 +1,6 @@
 import { Oval } from "react-loader-spinner";
 import Todo from "../components/todo/Todo";
-import useTasks from "../../Hooks/useTasks";
+import useTasks from "../Hooks/useTasks";
 
 export const Tasks = () => {
   const { tasks, isLoading, isError } = useTasks();
